@@ -10,11 +10,16 @@ const saludar2 = function ( nombre ) {
 };
 
 const saludarFlecha = () => {
-    console.log( 'Hola mundo' );
+    console.log( 'Hola flecha' );
+};
+
+const saludarFlecha2 = ( nombre ) => {
+    console.log( 'Hola flecha ' + nombre );
 };
 
 
 saludar( 'Kevin', 28, true, 'Colombia' );
 saludar2( 'Kevin' );
-// saludar2();
+saludarFlecha();
+saludarFlecha2( 'Maria Elena' );
 // saludar();
