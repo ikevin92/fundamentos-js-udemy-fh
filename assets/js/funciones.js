@@ -39,4 +39,24 @@ function sumar ( a, b ) {
     return a + b;
 }
 
-console.log( sunar( 1, 2 ) );
+const sumar2 = ( a, b ) => {
+    return a + b;
+};
+
+const sumar3 = ( a, b ) => a + b; // funcion de 1 sola linea
+
+
+console.log( sumar( 1, 2 ) );
+console.log( sumar2( 1, 2 ) );
+console.log( sumar3( 1, 2 ) );
+
+function getAleatorio () {
+    return Math.random();
+}
+
+// convertir get aleatorio en una funcion de flecha sin llaves
+const getAleatorio2 = () => Math.random();
+
+
+console.log( getAleatorio() );
+console.log( getAleatorio2() );
