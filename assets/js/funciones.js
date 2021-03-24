@@ -1,8 +1,14 @@
 
 
 function saludar ( nombre ) {
-    console.log( arguments ); // mostramos los argumentos de la funcion
+    console.log( arguments ); // muestra los argumentos de la funcion
     console.log( 'Hola ' + nombre );
+    // return 10;
+    return [ 10, 2, 433, 2 ];
+
+    // esto nunca se va a ejecutar
+    console.log( 'codigo deps del return' );
+
 }
 
 const saludar2 = function ( nombre ) {
@@ -23,3 +29,14 @@ saludar2( 'Kevin' );
 saludarFlecha();
 saludarFlecha2( 'Maria Elena' );
 // saludar();
+
+const retornoSaludar = saludar( 'Kevin', 28, true, 'Colombia' );
+console.log( { retornoSaludar } );
+
+
+// TAREA 
+function sumar ( a, b ) {
+    return a + b;
+}
+
+console.log( sunar( 1, 2 ) );
