@@ -1,5 +1,4 @@
 
-
 class Persona {
 
     static _conteo = 0;
@@ -53,34 +52,31 @@ class Persona {
 }
 
 
+class Heroe extends Persona {
+
+    clan = 'sin clan';
+
+    constructor ( nombre, codigo, frase ) {
+        super( nombre, codigo, frase ); // se debe poner cuando es herencia
+
+        this.clan = 'Avengers'; // los this deben ser siempre despues de el constructor
+    }
+
+    // sobrescribir metodo
+    quienSoy () {
+
+        console.log( `Soy ${ this.nombre }, ${ this.clan }` );
+        super.quienSoy();// se llama al metodo de la clase padre
+    }
+
+}
+
+
 // instancia de las clases
-const spiderman = new Persona( 'Peter Parker', 'Spiderman', 'Soy tu vecino amigable' );
-const ironman = new Persona( 'Tony Stark', 'Ironman', 'Soy millonario' );
+const spiderman = new Heroe( 'Peter Parker', 'Spiderman', 'Soy tu vecino amigable' );
+// const spiderman = new Heroe();
 
-
-
-// console.log( ironman );
-
-
+console.log( spiderman );
 spiderman.quienSoy();
-// ironman.quienSoy();
 
-spiderman.miFrase();
-// ironman.miFrase();
 
-// implementacion del set
-spiderman.setComidaFavorita = 'El pie de cereza de la tia May';
-spiderman.nemesis = 'Duende verde';
-
-// console.log( spiderman.getComidaFavorita );
-// console.log( spiderman );
-
-// Persona._conteo = 2;
-console.log( 'Conteo estatico', Persona._conteo );
-console.log( Persona.conteo );
-Persona.mensaje();
-
-// asignar propiedad estatica externa
-Persona.propiedadExterna = 'Hola propiedad estatica externa';
-console.log( Persona.propiedadExterna );
-console.log( Persona );
